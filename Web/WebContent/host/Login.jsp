@@ -15,18 +15,15 @@
 
 		<form method="post" action="Login">
 			<p>ID</p>
-				<input name="" value="" type="text" maxlength="20">
+				<input name="loginId" value="" type="text" maxlength="20">
 			<p>パスワード</p>
 			<input name="password" value="" placeholder="" type="password"
-				maxlength="20" autocomplete="off">
-			<p>
-
-			</p>
+				maxlength="20">
 		</form>
 	</div>
 
 	<footer>
-		<h2>下記リンク</h2>
+		<h2>・リンク</h2>
 		<a id="TMP-BTN-2"
 			class="btn_accent pc_w70per sp_w70per btn-registration" href="#"><span>新規会員登録</span></a><br>
 		<a id="TMP-BTN-2"
