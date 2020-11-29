@@ -11,7 +11,7 @@
 
 
 <body>
-<c:if test="${empty login }">
+<c:if test="${empty loginId }">
 <p>不正ログインの恐れ</p>
 </c:if>
 
