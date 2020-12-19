@@ -12,7 +12,7 @@ import util.util;
 /**
  * Servlet implementation class test01
  */
-@WebServlet("/test01")
+@WebServlet("/test/test01")
 public class test01 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,7 +44,7 @@ public class test01 extends HttpServlet {
 		String color="#"+util.change(red)+util.change(green)+util.change(blue);
 		String message="<font color=\"" +color +"\"><"+tag+">こんな表示になるのだ！</"+tag+"></font>";
 		request.setAttribute("message", message);
-		request.getRequestDispatcher("/WebTest01.jsp").forward(request, response);
+		request.getRequestDispatcher("/test/WebTest01.jsp").forward(request, response);
 
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -64,7 +64,7 @@ public class test01 extends HttpServlet {
 		String colorCode = util.CreateColorCode(red,green,blue);
 		String message="<font color=\"" +colorCode +"\"><"+tag+">こんな表示になるのだ！</"+tag+"></font>";
 		request.setAttribute("message", message);
-		request.getRequestDispatcher("/WebTest01.jsp").forward(request, response);
+		request.getRequestDispatcher("/test/WebTest01.jsp").forward(request, response);
 
 	}
 

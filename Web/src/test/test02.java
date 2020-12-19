@@ -13,7 +13,7 @@ import util.util;
 /**
  * Servlet implementation class test02
  */
-@WebServlet("/test02")
+@WebServlet("/test/test02")
 public class test02 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -32,7 +32,7 @@ public class test02 extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		request.getRequestDispatcher("/WebTest02.jsp").forward(request, response);
+		request.getRequestDispatcher("/test/WebTest02.jsp").forward(request, response);
 	}
 
 	/**
@@ -58,16 +58,16 @@ public class test02 extends HttpServlet {
 		try {
 			nums[0] = Integer.parseInt(num1Str);
 			nums[1] = Integer.parseInt(num2Str);
-			int sum = util.calc(nums, calc);
-			String result =""+"";
-			request.setAttribute("result", result);
+			int resultNum = util.calc(nums, calc);
+			//String result = resultNum;
+			request.setAttribute("result", resultNum);
 
 		} catch (Exception e) {
 			String msg = "入力は半角の数字だけにしてよね！";
 			request.setAttribute("msg", msg);
 		}
 
-		request.getRequestDispatcher("/WebTest02.jsp").forward(request, response);
+		request.getRequestDispatcher("/test/WebTest02.jsp").forward(request, response);
 
 	}
 
